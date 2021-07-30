@@ -167,19 +167,12 @@ function createScene(sceneId){
         triggerHook: bottomHook,
         duration:d3.select(`#${sceneId}`).node().clientHeight
     })
-    .on('enter', function(e){
-            d3.select(`#${sceneId}`).transition().duration(transitionDuration).style("opacity", 1)
-    })
-    .on('leave', e => { 
-
-        d3.select(`#${sceneId}`)
-        .transition().duration(transitionDuration).style("opacity", 0)
-
-    })
-    // .on('progress', e => { 
-
+    // .on('enter', function(e){
+    //         d3.select(`#${sceneId}`).transition().duration(transitionDuration).style("opacity", 1)
+    // })
+    // .on('leave', e => { 
     //     d3.select(`#${sceneId}`)
-    //         .style("opacity", scale(e.progress)) 
+    //     .transition().duration(transitionDuration).style("opacity", 0)
 
     // })
     return scene
