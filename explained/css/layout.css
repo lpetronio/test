@@ -1,5 +1,5 @@
 /* @media screen and (min-width: 769px) and (max-width: 1600px) { */
-body{
+  body{
     font-family: 'Overpass', sans-serif;
     font-size: 1rem;
     line-height: 1.4rem;
@@ -110,100 +110,59 @@ a {
   text-decoration: underline;
 }
 
-
-
-
-.banner{
-  background-color: #eaeaea;
-  padding: 3rem 0rem 3rem 0rem;
+.header-banner{
+  color:#EF4351;
+  text-transform:uppercase;
+  background:none;
 }
+
 .section-banner{
-  width:100%;
-  background-color: #eaeaea;
-  height:calc(100vh - 50px);
+  height:50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0px 6rem 0px 6rem;
 }
 
-.section-spacer{
-  margin-bottom:200px;
-  margin-top:200px;
-}
 #scroll-container{
   width:100%;
   margin:auto;
   margin-top:50px;
 }
 .section-scroll-wrapper{
+  width:100%;
+  margin:100px auto 100px auto;
   position:relative;
-  margin-bottom:100px;
-  margin-top:100px;
 }
-
+section{
+  margin:50px auto 50px auto;
+}
+.sub-section{
+  margin:2em auto 2em auto;
+}
+.scene{
+  height:80vh;
+}
+.text-block {
+  padding-left:2rem;
+  width:32%;
+  min-width:400px;
+  background-color: rgba(255,255,255,.65);
+}
 .plot-wrapper{
   position:absolute;
   top:0px;
   left:35%; 
   width:60%; 
+  min-width:400px;
   height:calc(100vh - 150px);
   z-index:-1000;
 }
-
-.scene{
-  height:80vh;
-  opacity:0;
-}
-.text-block {
-  padding:2rem;
-  width:32%;
-  background-color: rgba(255,255,255,.95);
-}
-.text-main{
-  padding-top:4rem;
-  width:60%;
-  max-width:900px;
-  margin:auto;
-}
-.scene-spacer{
-  padding-bottom:45vh;
-  opacity:0;
-}
-
-.box-wrapper {
-  border-top:.5px solid #eaeaea;
-    /* border: 1px solid rgba(226, 226, 226, .9);
-    border-radius:5px; */
-    padding:1rem 2rem 0rem 1rem;
-    margin:1rem 0rem 1rem 0rem;
-}
-
 
 .legend-wrapper{
   width:70%;
   margin:auto;
   margin:2rem 0rem 2rem 0rem;
-}
-
-.aha-icon{
-  width:80%;
-}
-
-.full-image{
-  width:90%;
-}
-.image-wrapper{
-  padding:50px 50px 50px 50px;
-}
-
-.cad-image-wrapper{
-  width:45%;
-  text-align:center;
-}
-.cad-image{
-  width:100%;
-  margin:auto;
 }
 
 
@@ -216,7 +175,6 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  /* justify-content: flex-start; */
   justify-content: space-between;
   width: 100%;
   padding:1rem 0rem 1rem 0rem;
@@ -233,8 +191,24 @@ a {
   padding:1rem 0rem 1rem 0rem;
   align-items: flex-end;
 }
-/* } */
-
+.card-block{
+  width:70%;
+}
+.card-icon{
+  background-color:#e2e2e2;
+  width:150px;
+  height:150px;
+}
+.card-info{
+  width:calc(100% - 150px);
+  padding:1em 1em 0 1em;
+}
+.reference-ul > li{
+font-size:.8em;
+}
+#references-section{
+  border-top:1px solid #e2e2e2;
+}
 
 
 
@@ -285,33 +259,21 @@ a {
       height:90vh;
       opacity:0;
     }
-
-    .text-block {
-      width:100%;
-      padding:.5rem 2rem .5rem 2rem;
-    }
     .legend-wrapper{
       width:80%;
     }
-
-
     h2{
       font-size: 1.4rem;
       line-height: 1.5em;
       padding:.5rem 2rem .5rem 0rem;
-  }
+    }
     p{
       font-size: 1.2rem;
       line-height: 1.5em;
     }
     .label-md, .plot-title, .gradientplot-label-riskbin{
       font-size: 1rem;
-    }
-    .aha-icon{
-      width:80%;
-    }
-
-  
+    }  
     .plot-title, .plot-label {
       font-size: 1rem;
     }

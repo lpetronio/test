@@ -11,34 +11,36 @@ h2{
     font-weight:300;
     font-size: 1.8rem;
     line-height: 1.5em;
-    /* padding:.5rem 2rem .5rem 0rem; */
     font-weight:800;
-    padding:.5rem 2rem 3.5rem 0rem;
+    padding:.5em 0em .5em 0em;
+    margin:2em 0 0 0;
 }
+
 .section-banner > h2 {
     font-weight: 300;
 }
 
-
 h3{
     font-family: 'Overpass', sans-serif;
     font-size:1.2rem;
-    font-weight:700;
-    padding:0rem 0rem .5rem 0rem;
+    font-weight:800;
+    padding:.5em 0em .5em 0em;
+    margin:2em 0 0 0;
 }
 
-p{
+p, li{
     font-family: 'Overpass', sans-serif;
     font-weight:300;
     font-size: 1.2rem;
     line-height: 1.5em;
-    margin:0px;
-    /* padding:.5rem 2rem .5rem 0rem; */
 }
-
-
-
-
+h4{
+    font-size:1rem;
+    font-weight:800;
+}
+ul li, ol li{
+    margin-bottom:1em;
+}
 .axis-tick {
     font-size:.8rem;
 }
@@ -71,9 +73,7 @@ p{
 .bold{
     font-weight:800;
 }
-/* #flag-label-risk{
-    font-weight:700;
-} */
+
 #distribution-path-label-average{
     fill:#888888;
 }
