@@ -1,0 +1,30 @@
+{
+  "name": "polygenic-risk-visual-explainer-aud",
+  "version": "1.0.0",
+  "description": "Visualizations developed by the Pattern team in collaboration with MGH and IBM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/broadinstitute/polygenic-risk-visual-explainer-aud.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Lia Petronio",
+    "email": "lpetroni@broadinstitute.org"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/broadinstitute/polygenic-risk-visual-explainer-aud/issues"
+  },
+  "homepage": "https://github.com/broadinstitute/polygenic-risk-visual-explainer-aud#readme",
+  "dependencies": {
+    "d3": "^5.15.0",
+    "scrollmagic": "^2.0.7"
+  },
+  "devDependencies": {
+    "file-loader": "^6.0.0"
+  }
+}

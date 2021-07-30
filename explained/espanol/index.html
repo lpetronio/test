@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta property="og:image" content="http://polygenicscores.org/explained/thumbnail.jpg">
+        <meta property="og:url" content="http://polygenicscores.org/explained/espanol/">
+        <meta property="og:title" content="Polygenic Scores Explained" />
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="http://polygenicscores.org/explained/thumbnail.jpg">
+        <meta name="twitter:site" content="http://polygenicscores.org/explained/espanol/">
+        <meta name="twitter:title" content="Polygenic Scores Explained" />
+
+
+        <title>Polygenic Scores Explained</title>
+        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,700,900|Playfair+Display:400,400i,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/fonts.css">
+        <link rel="stylesheet" href="../css/layout.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/bootstrap-grid.css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175914308-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-175914308-1');
+        </script>
+
+    </head>
+
+
+<body class="container-fluid">  
+
+    <div class="navbar">
+        <div class="navbar-home">
+            <a class="nav-home" id="intro-to-polygenic-scores-nav">Puntuaciones Poligénicas</a>
+            <div class="navbar-language">
+                <a class="nav-option" href="../index.html">English</a>
+                <a class="nav-option nav-active">Español</a>
+            </div>
+        </div>
+        <div class="navbar-sections">
+            <!-- <a class="nav-option" id="genetic-variation-nav">Variación genética</a>
+            <a class="nav-option" id="riskvariant-nav">Variantes de riesgo</a>
+            <a class="nav-option" id="pscalc-nav">Cálculo de la puntuación poligénica</a>
+            <a class="nav-option" id="psinterp-nav">Interpretación de la puntuación poligénica</a>
+            <a class="nav-option" id="psapp-nav">Aplicación de la puntuación poligénica</a>
+            <a class="nav-option" id="dnadestiny-nav">El ADN no es el destino</a> -->
+            <a class="nav-option" id="genetic-variation-nav">Variación genética</a>
+            <a class="nav-option" id="riskvariant-nav">Variantes de riesgo</a>
+            <a class="nav-option" id="pscalc-nav">Cálculo</a>
+            <a class="nav-option" id="psinterp-nav">Interpretación</a>
+            <a class="nav-option" id="psapp-nav">Aplicación</a>
+            <a class="nav-option" id="dnadestiny-nav">El ADN no es el destino</a>
+        </div>
+    </div>
+
+
+<div id="scroll-container">
+
+<section class="section-banner" id="intro-to-polygenic-scores-section">
+        <h2>
+        Una <b>puntuación poligénica</b> se usa para calcular el riesgo de una persona de desarrollar una enfermedad específica según su genética.
+        <br><br>
+        Saber si sus antecedentes genéticos aumentan su riesgo de desarrollar determinadas enfermedades puede ayudarlo a tomar decisiones importantes sobre su salud.
+    </h2>
+</section>
+
+<section class="section-scroll-wrapper" id="variant-scroll-wrapper">
+    <div class="plot-wrapper" id="variant-plot-wrapper"></div>
+
+    <section class="section-wrapper" id="genetic-variation-section">
+
+        <div class="scene" id="genetic-variation-genetic-code">
+            <div class="text-block">
+                <h2>Variación genética</h2>
+                <p>Todos tenemos un código genético que heredamos de cada uno de nuestros padres. El código genético de una persona está formado por <b class='san-label non-v-color'>unidades de información</b> que contienen instrucciones necesarias para que el cuerpo funcione.</p>
+            </div>
+        </div>
+
+        <div class="scene" id="genetic-variation-variant">
+            <div class="text-block">
+                <p>La mayor parte del código genético es idéntica entre las personas. Sin embargo, las diferencias en el código genético se llaman <b class="san-label v-color">variantes genéticas</b>.</p>
+            </div>
+        </div>
+
+        <div class="scene" id="genetic-variation-group-variant">
+            <div class="text-block">
+                <p>Las <b class="san-label v-color">variantes genéticas</b> contribuyen a los rasgos que nos hacen únicos, como el color de ojos, la altura y las preferencias en el gusto.</p>
+            </div>
+        </div>
+
+        <div class="scene" id="genetic-variation-group-disease-variant">
+            <div class="text-block">
+                <p>Las variantes genéticas también pueden afectar nuestro riesgo de desarrollar ciertas enfermedades y se llaman <b class="san-label dvi-color">variantes de riesgo</b>.</p>
+            </div>
+        </div>
+
+    </section>
+</section>
+<!-- end of variant section -->
+
+
+<section class="section-scroll-wrapper" id="riskvariant-scroll-wrapper">
+    <div class="plot-wrapper" id="riskvariant-plot-wrapper"></div>
+
+    <section class="section-wrapper" id="riskvariant-section">
+
+        <div class="scene" id="riskvariant-group">
+            <div class="text-block">
+                <h2>Variantes de riesgo</h2>
+                <p><b>Para descubrir las variantes de riesgo</b>, los científicos comparan los códigos genéticos de personas que no tienen una enfermedad con los de personas que la tienen.
+                </p>
+            </div>
+        </div>
+        <div class="scene" id="riskvariant-increase">
+            <div class="text-block">
+                <p> Si ocurre una variante genética con mayor frecuencia en personas con una enfermedad, se asocia <b class="san-label dvi-color">con un mayor riesgo</b>.
+                </p>
+            </div>
+        </div>
+
+        <div class="scene" id="riskvariant-decrease">
+            <div class="text-block">
+                <p>Si ocurre una variante genética con mayor frecuencia en personas que no tienen una enfermedad, se asocia con <b class="san-label dvr-color">un menor riesgo</b>.
+                </p>
+            </div>
+        </div>
+
+        <div id="riskvariant-magnitude">
+
+            <div class="scene" id="riskvariant-magnitude-1">
+                <div class="text-block">
+                    <p>Las variantes de riesgo pueden aumentar o disminuir el riesgo de una persona de desarrollar una enfermedad y pueden <b>afectar en diferentes magnitudes</b>.
+                    </p>
+                </div>
+            </div>
+            <div class="scene" id="riskvariant-magnitude-2">
+                <div class="text-block">
+                    <p>
+                        Algunas variantes de riesgo tienen un <b>gran impacto</b> en el riesgo y otras tienen <b>poco impacto</b> en el riesgo.
+                    </p>
+                    <div class="legend-wrapper" id="riskvariant-magnitute-legend">
+                            <span class="legend-label" style="float:left">&#8592; poco impacto</span>
+                            <span class="legend-label" style="float:right">gran impacto &#8594;</span>
+                            <image src="../images/effect_legend.svg"></image>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scene" id="riskvariant-leave">
+            <div class="text-block">
+                <p> Una única, variante de impacto pequeño tiene poco impacto en el riesgo, pero <b>muchas de ellas juntas tienen un gran impacto</b>.</p>
+            </div>
+        </div>
+
+    </section>
+</section>
+
+<section class="section-banner">
+        <h2>Una puntuación poligénica analiza todas estas variantes de riesgo de impacto pequeño a la vez para calcular el riesgo de una persona de desarrollar una enfermedad.</h2>
+</section>
+
+
+
+<section class="section-scroll-wrapper" id="pscalc-scroll-wrapper">
+    
+    <div class="plot-wrapper" id="ps-plot-wrapper"></div>
+    <section class="section-wrapper" id="pscalc-section">
+
+        <div class="scene" id="pscalc-individual-pair">
+            <div class="text-block">
+                <h2>Cálculo de la puntuación poligénica</h2>
+                <p><b>Para calcular la puntuación de riesgo poligénico</b> de desarrollar una enfermedad específica, los científicos suman la cantidad total de variantes que aumentan o reducen el riesgo, junto con la magnitud del efecto.</p>
+            </div>
+        </div>
+
+        <div class="scene" id="pscalc-individual-stack">
+            <div class="text-block">
+                <p>Una puntuación poligénica indica cómo se compara su riesgo de desarrollar una enfermedad con el de otras personas.</p>
+            </div>
+        </div>
+
+        <div class="scene" id="pscalc-population-pair">
+            <div class="text-block">
+                <p>Los científicos pueden determinar las puntuaciones poligénicas de toda una población.</p>
+            </div>
+        </div>
+
+        <div class="scene" id="pscalc-population-stack">
+            <div class="text-block">
+                <p>Algunas personas tienen mayor o menor puntuación, dependiendo de su cantidad de variantes que aumentan o reducen el riesgo y la magnitud del efecto de cada variante.</p>
+            </div>
+        </div>
+
+
+        <div class="scene" id="pscalc-population-average">
+            <div class="text-block">
+                <p>Las personas con un número aproximadamente igual de variantes que aumentan y disminuyen el riesgo tienen <b class="non-v-color">un riesgo promedio de desarrollar una enfermedad</b> según su genética.
+            </div>
+        </div>
+
+        <div class="scene" id="pscalc-population-increase">
+            <div class="text-block">
+                <p>Las personas que tienen más variantes que aumentan el riesgo tienen <b class="dvi-color">mayor riesgo de desarrollar una enfermedad</b> según su genética.
+            </div>
+        </div>
+
+        <div class="scene" id="pscalc-population-decrease">
+            <div class="text-block">
+                <p>Las personas que tienen más variantes que disminuyen el riesgo tienen <b class="dvr-color">menor riesgo de desarrollar una enfermedad</b> según su genética.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-wrapper" id="psinterp-section">
+
+        <div class="scene" id="psinterp-distribution-average">
+            <div class="text-block">
+               <h2>Interpretación de la puntuación poligénica</h2>
+                    <p>La mayoría de las personas tienen un <b class="non-v-color">riesgo genético promedio de desarrollar una enfermedad</b>.</p>
+            </div>
+        </div>
+
+        <div class="scene" id="psinterp-distribution-increased">
+            <div class="text-block">
+                <p>
+                    <b>Su puntuación puede ser más alta que el promedio</b>, lo que significa que tiene <b class="dvi-color">mayor riesgo de desarrollar una enfermedad</b> comparado con la mayoría de las personas.
+                    <br><br>
+                    <b>Si su puntuación poligénica está en el percentil 95</b>, no significa que tenga una probabilidad del 95% de desarrollar la enfermedad. En cambio, significa que de cada 100 personas, su puntuación poligénica es más alta que la de 95 personas y es igual o menor que la de 5.
+                </p>
+            </div>
+        </div>
+
+        <div class="scene" id="psinterp-distribution-decreased">
+            <div class="text-block">
+                <p>
+                    <b>Su puntuación puede ser inferior al promedio</b>, lo que significa que tiene <b class="dvr-color">menor riesgo genético de desarrollar una enfermedad</b> comparado con la mayoría de las personas.
+                    <br><br>
+                    <b>Si su puntuación de riesgo poligénico está en el  percentil 5</b>, no significa que tenga una probabilidad del 5 % de desarrollar la enfermedad. En cambio, significa que de cada 100 personas, su puntuación poligénica es más alta que la de 5 personas y es igual o menor que la de 95.
+                </p>
+            </div>
+        </div>
+
+
+    </section>
+
+</div>
+
+
+</section>
+
+
+
+
+<section class="section-scroll-wrapper" id="psapp-section">
+
+        <div class="banner">
+
+            <div class="container">
+                <h2>Aplicación de la puntuación poligénica</h2>
+                <p>Las puntuaciones poligénicas pueden ser herramientas útiles para evaluar el riesgo de desarrollar enfermedades importantes, como la enfermedad de las arterias coronarias, una de las principales causas de muerte en los EE. UU. y en todo el mundo
+                <br><br>
+                La enfermedad de las arterias coronarias se produce debido a la acumulación de placa en los vasos sanguíneos que suministran sangre rica en oxígeno al músculo cardíaco. A partir de los 20 años, la placa se acumula con el tiempo y, en última instancia, aumenta el riesgo de obstrucción total de un vaso, lo que se conoce como infarto de miocardio o "ataque cardíaco". En EE. UU. aproximadamente el 5 % (1 de cada 20) personas desarrollan insuficiencia cardíaca (CAD) antes de los 50 años y hasta el 25 % (1 de cada 4) desarrollan CAD antes de los 80 años.
+                
+                </p>
+
+                <div class="flex-container image-wrapper" id="psapp-cad-plaque">
+                    <div class="cad-image-wrapper">
+
+                        <span class="label-md" style="float:right; padding-right:20px;"><b>vaso sanguíneo</b></span>
+                        <img class="cad-image" id="cad-plaque-image-0" src="../images/CAD-plaque-0.png"/>
+
+                    </div>
+
+                    <div class="cad-image-wrapper">
+                        <span class="label-md" style="text-align: center"><b>acumulación de placa</b></span>
+                        <img class="cad-image" id="cad-plaque-image-1" src="../images/CAD-plaque-1.png"/>
+                    </div>  
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-scroll-wrapper" id="dnadestiny-section">
+        <div class="container">
+            <h2>El ADN no es el destino, hay más factores que influyen en el riesgo que usted tiene.</h2>
+            <p>Una puntuación poligénica de enfermedad de las arterias coronarias se basa solo en el código genético con el que nació.
+            <br><br>
+            Aunque no puede cambiar su puntuación poligénica, seguir un estilo de vida saludable y trabajar con su equipo de atención médica para tratar cualquier factor de riesgo clínico puede disminuir significativamente su riesgo.
+            <br><br>
+            La Asociación Americana del Corazón ha descrito siete factores clave que contribuyen a una salud cardiovascular ideal (<a href="https://www.heart.org/en/healthy-living/healthy-lifestyle/my-life-check--lifes-simple-7" target="_blank">‘Life’s Simple 7’</a>). Las personas que tienen al menos cinco de estos factores saludables tienen un  <a href="https://www.ahajournals.org/doi/full/10.1161/circulationaha.111.049122" target="_blank">78 % de menos riesgo </a> de tener una muerte relacionada con el corazón comparado con las personas que no tienen ningún factor saludable.
+            <br><br>
+            </p>
+        
+            <h3>Los siete factores que contribuyen a una salud cardiovascular ideal ("Life's Simple 7") incluyen:</h3>
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="../images/CAD-AHA (1)-05.png"/>
+                </div>
+                <div class="col-10 col-md-9">
+                    <h3>Control de la presión arterial</h3>
+                    <p class="p-caption">Una <a href="https://www.heart.org/-/media/data-import/downloadables/f/9/8/pe-abh-what-is-high-blood-pressure-ucm_300310.pdf?la=en" target="_blank">presión arterial normal</a> es una presión sistólica ("número superior") menor de 120 mm Hg y una presión diastólica ("número inferior") menor de 80 mm Hg.
+                    <br><br>                    
+                    Comparado con las personas que tienen la presión arterial elevada, las personas que tienen la presión arterial normal tienen un <b>24%  menos riesgo*</b> de desarrollar enfermedad de las arterias coronarias.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="../images/CAD-AHA (1)-03.png"/>
+                </div>
+                <div class="col-10 col-sm-9">
+                    <h3>Control del colesterol</h3>
+                    <p class="p-caption">Un <a href="https://www.nhlbi.nih.gov/files/docs/public/heart/wyntk.pdf" target="_blank">valor normal de colesterol total sin tratamiento</a> en adultos es de <200 mg/dL. Comparado con las personas que tienen el colesterol elevado, las personas que tienen el colesterol normal tienen un <b>16% menos riesgo* </b>de tener enfermedad de las arterias coronarias.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="../images/CAD-AHA (1)-06.png"/>
+                </div>
+                <div class="col-10 col-sm-9">
+                    <h3>Reducción del azúcar en la sangre</h3>
+                    <p class="p-caption">
+                        
+                        Un <a href="https://www.heart.org/-/media/healthy-living-files/infographics/lifes-simple-7-blood-sugar-infographic.pdf?la=en" target="_blank">valor normal de azúcar en la sangre</a> ("glucosa en sangre en ayunas") es de <100 mg/dL. Comparado con las personas que tienen un nivel elevado de azúcar en la sangre, las personas que tienen el azúcar en la sangre normal tienen <b>31% menos riesgo*</b> de tener enfermedad de las arterias coronarias.
+                        
+                        
+                </div>
+               
+            </div>
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="../images/CAD-AHA (1)-04.png"/>
+                </div>
+                <div class="col-10 col-sm-9">
+                    <h3>Hacer ejercicio regularmente</h3>
+                    <p class="p-caption">
+                        <a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/aha-recs-for-physical-activity-in-adults" target="_blank">Las recomendaciones actuales </a> de actividad física sugieren al menos 150 minutos/semana de ejercicio de intensidad moderada o 75 minutos/semana de ejercicio vigoroso o combinado.
+                        <br><br>
+                        Comparado con las personas que no hacen esta cantidad de ejercicio, las personas que siguen esta recomendación tienen un <b>16% menos de riesgo*</b> de tener enfermedad de las arterias coronarias.</p>
+                </div>
+
+            </div>
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="../images/CAD-AHA (1)-07.png"/>
+                </div>
+                <div class="col-10 col-sm-9">
+                    <h3>Seguir una dieta saludable</h3>
+                    <p class="p-caption">Una <a href="https://www.heart.org/en/healthy-living/healthy-lifestyle/my-life-check--lifes-simple-7/lifes-simple-7-eat-better-infographic" target="_blank">dieta saludable</a> incluye comida saludable para el corazón, como frutas, verduras, pescado, granos integrales, y es baja en comida poco saludable como el sodio y las bebidas endulzadas con azúcar.
+                    <br><br>
+                    Comparado con las personas que tienen un patrón de dieta poco saludable, las personas que siguen una dieta saludable tienen un <b>27% menos riesgo*</b> de enfermedad de las arterias coronarias.</p>
+                </div>
+            </div>
+
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="../images/CAD-AHA (1)-01.png"/>
+                </div>
+                <div class="col-10 col-sm-9">
+                    <h3>Mantener un peso normal</h3>
+                    <p class="p-caption">Un <a href="https://www.heart.org/en/healthy-living/healthy-eating/losing-weight/bmi-in-adults" target="_blank"> peso normal </a> se define como un <a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm" target="_blank">índice de masa corporal</a> menor de 25 kg/m2. Comparado con los que tienen un índice de masa corporal mayor, las personas que tienen un peso normal tienen un <b>36% lmenos riesgo*</b> de tener enfermedad de las arterias coronarias.</p>
+                </div>
+            </div>
+
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="../images/CAD-AHA (1)-02.png"/>
+                </div>
+                <div class="col-10 col-sm-9">
+                    <h3>Dejar de fumar</h3>
+                    <p class="p-caption"><a href="https://www.heart.org/en/healthy-living/healthy-lifestyle/my-life-check--lifes-simple-7/ls7-quit-smoking-infographic" target="_blank">Fumar</a> es la principal causa prevenible de enfermedad de las arterias coronarias. Comparado con los que han fumado, las personas que nunca han fumado tienen un <b>26% menos de riesgo*</b> de enfermedad de las arterias coronarias.</p>
+                </div>
+            </div>
+            *Los cálculos de riesgo de arriba se basan en un análisis de 486,477 participantes del estudio de investigación <a href="https://www.ukbiobank.ac.uk/" target="_blank">UK Biobank</a>.</p>
+        </div>
+
+    </section>
+
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="flex-end-row row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="copyright">Esta herramienta de educación fue diseñada por Lia Petronio, desarrolladora de visualización de datos de Pattern (un equipo centrado en la visualización de datos) en Broad Institute como parte de una colaboración centrada en la predicción del riesgo cardiovascular entre la Iniciativa de Enfermedad Cardiovascular de Broad Institute (Broad Institute's Cardiovascular Disease Initiative) y la investigación de IBM (IBM Research). Desarrollo de contenido guiado por la consejera genética Deanna Brockman y la becaria postdoctoral Jacqueline Dron.</div>
+                </div>
+    
+                <div class="col-lg-4 offset-lg-4 col-md-12 col-sm-12">
+                    <br>
+                    <div class="copyright">Diseñado y desarrollado por <a href="https://pattern.broadinstitute.org" target="_blank">Pattern</a></div>
+                    <div class="copyright">Comuníquese con nosotros escribiendo a <a href="mailto:pattern@broadinstitute.org">pattern@broadinstitute.org</a></div>
+        
+                </div>
+            </div>
+    
+            <div class="flex-end-row row">
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <a  href="https://www.broadinstitute.org/" target="_blank"><img  class="logo" src="images/logo_broad_black.svg" alt=""></a>
+                </div>
+                <div class="col-lg-4 offset-lg-6 offset-md-2 col-md-4 col-sm-6">
+                    <br>
+                    <div class="copyright">© 2021 Broad Institute. Todos los derechos reservados.</div> 
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+     
+</body>
+
+    <script src="../build/js/polygenic-score-visual-explainer.min.js"></script>
+    <script>
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const data = {
+                score: "../data/CAD.Percentile.Score.csv",
+                risk: "../data/CAD.Percentile.OddsRatio.csv",
+                figure: "../images/figure.svg",
+                language: "espanol"
+            }
+            const promises = polygenicScoreVisualExplainer.createDataPromises(data);
+          //  window.location.replace("http://polygenicscores.org/explained/");
+
+        });
+    </script>
+
+
+</html>

@@ -1,0 +1,99 @@
+
+h1 {
+    font-size:1.8rem;
+    font-weight: 900;
+    margin-bottom:1rem;  
+    margin-top:.5rem;    
+}
+
+h2{
+    font-family: 'Overpass', sans-serif;
+    font-weight:300;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    /* padding:.5rem 2rem .5rem 0rem; */
+    font-weight:800;
+    padding:.5rem 2rem 3.5rem 0rem;
+}
+.section-banner > h2 {
+    font-weight: 300;
+}
+
+
+h3{
+    font-family: 'Overpass', sans-serif;
+    font-size:1.2rem;
+    font-weight:700;
+    padding:0rem 0rem .5rem 0rem;
+}
+
+p{
+    font-family: 'Overpass', sans-serif;
+    font-weight:300;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    margin:0px;
+    /* padding:.5rem 2rem .5rem 0rem; */
+}
+
+
+
+
+.axis-tick {
+    font-size:.8rem;
+}
+.plot-title{
+    font-size:1.2rem;
+    font-weight:700;
+}
+.plot-label {
+    font-size: 1.2rem;
+    line-height: 1.2em;
+    font-weight:700;
+}
+.legend-label{
+    font-size:.8rem;
+    font-weight:900;
+    color:#888888;
+}
+
+.ps-flag-banner{
+    font-weight:700;
+    fill:white;  
+}
+#flag-banner-label{
+    text-transform: uppercase;
+}
+.flag-label{
+    font-size:1.5em;
+    font-weight:300;
+}
+.bold{
+    font-weight:800;
+}
+/* #flag-label-risk{
+    font-weight:700;
+} */
+#distribution-path-label-average{
+    fill:#888888;
+}
+.dvi-color, #gradientplot-label-riskbin-increased{
+    color:#EF4351; 
+    fill:#EF4351; 
+}
+.dvr-color, #gradientplot-label-riskbin-decreased{
+    color:#00A9BA;
+    fill:#00A9BA;
+}
+.v-color{
+    color:#DFA626;
+}
+.non-v-color, #gradientplot-label-riskbin-average{
+    color:#888888;
+    fill:#888888;
+}
+
+b{
+    font-weight:700;
+}
+

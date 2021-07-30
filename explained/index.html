@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta property="og:image" content="http://polygenicscores.org/explained/thumbnail.jpg">
+        <meta property="og:url" content="http://polygenicscores.org/explained/">
+        <meta property="og:title" content="Polygenic Scores Explained" />
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="http://polygenicscores.org/explained/thumbnail.jpg">
+        <meta name="twitter:site" content="http://polygenicscores.org/explained/">
+        <meta name="twitter:title" content="Polygenic Scores Explained" />
+
+
+        <title>Polygenic Scores Explained</title>
+        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,700,900|Playfair+Display:400,400i,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap-grid.css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175914308-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-175914308-1');
+        </script>
+
+    </head>
+
+
+<body class="container-fluid">  
+
+    <div class="navbar">
+        <div class="navbar-home">
+            <a class="nav-home" id="intro-to-polygenic-scores-nav">Polygenic Scores</a>
+            <div class="navbar-language">
+                <a class="nav-option nav-active" href="#">English</a>
+                <a class="nav-option" href="espanol/index.html">Español</a>
+            </div>
+        </div>
+        <div class="navbar-sections" id="sections">
+            <!-- <a class="nav-option" id="genetic-variation-nav">Genetic Variation</a>
+            <a class="nav-option" id="riskvariant-nav">Risk Variants</a>
+            <a class="nav-option" id="pscalc-nav">Polygenic Score Calculation</a>
+            <a class="nav-option" id="psinterp-nav">Polygenic Score Interpretation</a>
+            <a class="nav-option" id="psapp-nav">Polygenic Score Application</a>
+            <a class="nav-option" id="dnadestiny-nav">DNA is not Destiny</a> -->
+            <a class="nav-option" id="genetic-variation-nav">Genetic Variation</a>
+            <a class="nav-option" id="riskvariant-nav">Risk Variants</a>
+            <a class="nav-option" id="pscalc-nav">Calculation</a>
+            <a class="nav-option" id="psinterp-nav">Interpretation</a>
+            <a class="nav-option" id="psapp-nav">Application</a>
+            <a class="nav-option" id="dnadestiny-nav">DNA is not Destiny</a>
+        </div>
+        
+    </div>
+
+
+    <div id="scroll-container">
+
+      
+
+<section class="section-banner" id="intro-to-polygenic-scores-section">
+        <h2><b>A polygenic score</b> is used to estimate a person’s risk for a particular disease based on their genetics.
+        <br><br> Knowing whether your genetic background increases your risk to develop certain diseases may help you make important decisions about your health.</h2>
+</section>
+
+<section class="section-scroll-wrapper" id="variant-scroll-wrapper">
+    <div class="plot-wrapper" id="variant-plot-wrapper"></div>
+
+    <section class="section-wrapper" id="genetic-variation-section">
+
+        <div class="scene" id="genetic-variation-genetic-code">
+            <div class="text-block">
+                <h2>Genetic Variation</h2>
+                <p>Everyone has a genetic code that they inherit from each of their parents. Each person’s genetic code is made up of <b class='san-label non-v-color'>units of information</b>, that contain instructions the body needs in order to function.</p>
+            </div>
+        </div>
+
+        <div class="scene" id="genetic-variation-variant">
+            <div class="text-block">
+                <p>Most of the genetic code is identical between individuals. However, differences in the genetic code are called <b class="san-label v-color">genetic variants</b>.</p>
+            </div>
+        </div>
+
+        <!-- <div class="scene" id="leave-genetic-variation-helix"></div> -->
+
+        <div class="scene" id="genetic-variation-group-variant">
+            <div class="text-block">
+                <p><b class="san-label v-color">Genetic variants</b> contribute to traits that make us unique such as eye color, height, and taste preferences.</p>
+            </div>
+        </div>
+
+        <div class="scene" id="genetic-variation-group-disease-variant">
+            <div class="text-block">
+                <p>Genetic variants can also impact our risk of developing certain diseases &mdash; these are called <b class="san-label dvi-color">risk variants</b>.</p>
+            </div>
+        </div>
+
+    </section>
+</section>
+<!-- end of variant section -->
+
+
+<section class="section-scroll-wrapper" id="riskvariant-scroll-wrapper">
+    <div class="plot-wrapper" id="riskvariant-plot-wrapper"></div>
+
+    <section class="section-wrapper" id="riskvariant-section">
+
+        <div class="scene" id="riskvariant-group">
+            <div class="text-block">
+                <h2>Risk Variants</h2>
+                <p><b>To discover risk variants</b>, scientists compare the genetic codes of people without a disease to people with a disease.</p>
+            </div>
+        </div>
+        <div class="scene" id="riskvariant-increase">
+            <div class="text-block">
+                <p> If a genetic variant occurs more frequently in people with a disease, it is associated with <b class="san-label dvi-color">increased risk</b>.</p>
+            </div>
+        </div>
+
+        <div class="scene" id="riskvariant-decrease">
+            <div class="text-block">
+                <p> If a genetic variant  occurs more frequently in people without a disease, it is associated with <b class="san-label dvr-color">decreased risk</b>.</p>
+            </div>
+        </div>
+
+        <div id="riskvariant-magnitude">
+
+            <div class="scene" id="riskvariant-magnitude-1">
+                <div class="text-block">
+                    <p>Risk variants can increase or decrease a person’s risk of disease and each can have different <b>magnitudes of impact</b>.
+                        <!-- <br><br>
+                        Some risk variants have a <b>large impact</b> on risk and some risk variants have a <b>small impact</b> on risk. -->
+                    </p>
+                    <!-- <div class="legend-wrapper" id="riskvariant-magnitute-legend">
+                            <span class="label label-md" style="float:left">&#8592; small impact</span>
+                            <span class="label label-md" style="float:right">large impact &#8594;</span>
+                            <image src="images/effect_legend.svg"></image>
+                    </div> -->
+                </div>
+            </div>
+            <div class="scene" id="riskvariant-magnitude-2">
+                <div class="text-block">
+                    <p>
+                        Some risk variants have a <b>large impact</b> on risk and some risk variants have a <b>small impact</b> on risk.
+                    </p>
+                    <div class="legend-wrapper" id="riskvariant-magnitute-legend">
+                            <span class="legend-label" style="float:left">&#8592; small impact</span>
+                            <span class="legend-label" style="float:right">large impact &#8594;</span>
+                            <image src="images/effect_legend.svg"></image>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scene" id="riskvariant-leave">
+            <div class="text-block">
+                <p>  A single, small impact variant has little impact on risk, but <b>many of them together have a larger impact</b>.</p>
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="section-banner">
+        <h2> A <b>polygenic score</b> 
+        looks at all of these small impact risk variants at once to estimate a person’s risk for a disease.</h2>
+</section>
+
+
+
+<section class="section-scroll-wrapper" id="pscalc-scroll-wrapper">
+    
+    <div class="plot-wrapper" id="ps-plot-wrapper"></div>
+    <section class="section-wrapper" id="pscalc-section">
+
+        <div class="scene" id="pscalc-individual-pair">
+            <div class="text-block">
+                <h2>Polygenic Score Calculation</h2>
+                <!-- <p><b>To calculate a person's polygenic score</b> for a particular disease, scientists add up the total number of <b class="dvi-color">risk-increasing</b> and <b class="dvr-color">risk-decreasing variants</b>, along with their magnitude of impact.</p> -->
+                <p><b>To calculate a person's polygenic score</b> for a particular disease, scientists add up the total number of risk-increasing and risk-decreasing variants, along with their magnitude of impact.</p>
+                <!-- <p>
+                    <b>To calculate a person's polygenic score</b> for a particular disease, scientists looks at all of these small impact risk variants at once to estimate a person’s risk for a disease.
+                </p> -->
+            </div>
+        </div>
+
+        <div class="scene" id="pscalc-individual-stack">
+            <div class="text-block">
+                <p>A polygenic score tells you how your risk for disease compares to others.
+                </p>
+            </div>
+        </div>
+
+        <!-- <div class="scene" id="leave-pscalc-individual"></div> -->
+
+
+        <div class="scene" id="pscalc-population-pair">
+            <div class="text-block">
+                <p>Scientists can determine polygenic scores for a whole population.
+                </p>
+            </div>
+        </div>
+
+        <div class="scene" id="pscalc-population-stack">
+            <div class="text-block">
+                <!-- <p>Some people will have a higher or lower score, depending on their number of <b class="dvi-color">risk-increasing</b> or <b class="dvr-color">risk-decreasing</b> variants, and the effect size of each variant.</p> -->
+                <p>Some people will have a higher or lower score, depending on their number of risk-increasing or risk-decreasing variants, and the magnitude of impact of each variant.</p>
+            </div>
+        </div>
+
+
+        <div class="scene" id="pscalc-population-average">
+            <div class="text-block">
+     
+                
+                <!-- <p> The majority of people in a population will have an approximately equal number of both risk-increasing and risk-decreasing variants placing them at an <b class="non-v-color">average risk of disease</b> based on their genetics.</p> -->
+
+                <p>People with an approximately even number of risk-increasing and risk-decreasing variants are at an <b class="non-v-color">average risk of disease</b> based on their genetics. </p>
+                <!-- <p>People with an approximately even number of risk-increasing and risk-decreasing variants have <b class="non-v-color">average scores</b>.</p> -->
+            </div>
+        </div>
+
+
+
+        <div class="scene" id="pscalc-population-increase">
+            <div class="text-block">
+                <!-- <p><b class="dvi-color">People with more increasing risk variants</b> are at an increased risk.</p> -->
+                <p>People with more risk-increasing variants are at an <b class="dvi-color">increased risk of disease</b> based on their genetics.</p>
+                <!-- <p>People with more risk-increasing variants have <b class="dvi-color">higher scores</b>.</p> -->
+
+            </div>
+        </div>
+
+
+        <div class="scene" id="pscalc-population-decrease">
+            <div class="text-block">
+                <!-- <p><b class="dvr-color">People with more decreasing risk variants</b> are at a decreased risk.</p> -->
+                <p>People with more risk-decreasing variants are at a <b class="dvr-color">decreased risk of disease</b> based on their genetics.</p>
+                <!-- <p>People with more risk-decreasing variants have <b class="dvr-color">lower scores</b>.</p> -->
+            </div>
+        </div>
+        <!-- <div class="scene" id="leave-pscalc-population"></div> -->
+    </section>
+
+    <section class="section-wrapper" id="psinterp-section">
+
+        <div class="scene" id="psinterp-distribution-average">
+            <div class="text-block">
+               <h2>Polygenic Score Interpretation</h2>
+
+                    <!-- <p> The majority of people in a population will have an approximately equal number of both risk-increasing and risk-decreasing variants placing them at an <b class="non-v-color">average risk of disease</b> based on their genetics.</p> -->
+                    <p>Most people have <b class="non-v-color">average genetic risk of disease</b>.
+                    </p>
+            </div>
+        </div>
+
+        <div class="scene" id="psinterp-distribution-increased">
+            <div class="text-block">
+                <p>
+
+                    <b>Your score can be higher than average</b> meaning that you have <b class="dvi-color">increased genetic risk of disease</b> compared to most people.
+                    <br><br>
+                    <b>If your polygenic score is in the 95th percentile</b>, you do not have a 95% chance of developing the disease. Rather it means that &mdash; out of 100 people &mdash; your polygenic score is higher than 95 people and the same or lower than 5.
+                </p>
+            </div>
+        </div>
+
+        <div class="scene" id="psinterp-distribution-decreased">
+            <div class="text-block">
+                <p>
+                    <b>Your score can be lower than average</b> meaning that you have <b class="dvr-color">decreased genetic risk of disease</b> compared to most people.
+                    <br><br>
+                    <b>If your polygenic score is in the 5th percentile</b>, you do not have a 5% chance of developing the disease. Rather it means that &mdash; out of 100 people &mdash; your polygenic score is higher than 5 people and the same or lower than 95.
+                </p>
+            </div>
+        </div>
+
+
+    </section>
+
+</div>
+
+
+</section>
+
+
+
+
+<section class="section-scroll-wrapper" id="psapp-section">
+
+        <div class="banner">
+
+            <div class="container">
+                <h2>Polygenic Score Application</h2>
+                <p>Polygenic scores may be useful tools to assess risk for important diseases, such as coronary artery disease &mdash; a leading cause of death in the U.S. and globally.
+                <br><br>
+                Coronary artery disease occurs due to buildup of plaque in the blood vessels that supply oxygen-rich blood to the heart muscle. Starting as early as our 20's, plaques build up over time and ultimately increase risk of a totally clogged vessel, referred to as a myocardial infarction or 'heart attack.' In the U.S., about 5% (1 in 20) of individuals develop CAD by age 50, and up to 25% (1 in 4) develop CAD by age 80.
+                </p>
+
+                <div class="flex-container image-wrapper" id="psapp-cad-plaque">
+                    <div class="cad-image-wrapper">
+
+                        <span class="label-md" style="float:right; padding-right:20px;"><b>blood vessel</b></span>
+                        <img class="cad-image" id="cad-plaque-image-0" src="images/CAD-plaque-0.png"/>
+
+                    </div>
+
+                    <div class="cad-image-wrapper">
+                        <span class="label-md" style="text-align: center"><b>buildup of plaque</b></span>
+                        <img class="cad-image" id="cad-plaque-image-1" src="images/CAD-plaque-1.png"/>
+                    </div>  
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- <div class="section-spacer"> -->
+
+    <section class="section-scroll-wrapper" id="dnadestiny-section">
+        <div class="container">
+            <h2>DNA is not destiny &mdash; additional factors influence your risk</h2>
+            <p>A polygenic score for coronary artery disease is based only on the genetic code you were born with. 
+            <br><br>
+            Even though you can’t change your polygenic score, following a healthy lifestyle and working with your health care team to treat any clinical risk factors can significantly decrease your risk.
+            <br><br>
+            The American Heart Association has outlined seven key factors that contribute to ideal cardiovascular health (<a href="https://www.heart.org/en/healthy-living/healthy-lifestyle/my-life-check--lifes-simple-7" target="_blank">‘Life’s Simple 7’</a>). Individuals with at least five of these healthy factors have a <a href="https://www.ahajournals.org/doi/full/10.1161/circulationaha.111.049122" target="_blank">78% reduced risk</a> for heart-related death compared to people without any healthy factors.
+            </p>
+            <br>
+            <br>
+            <h3>‘Life’s Simple 7’ factors include:</h3>
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="images/CAD-AHA (1)-05.png"/>
+                </div>
+                <div class="col-10 col-md-9">
+                    <h3>Manage Blood Pressure</h3>
+                    <p class="p-caption">A <a href="https://www.heart.org/-/media/data-import/downloadables/f/9/8/pe-abh-what-is-high-blood-pressure-ucm_300310.pdf?la=en" target="_blank">normal blood pressure</a> is systolic (‘top number’) less than 120 mm Hg and diastolic (‘bottom number’) less than 80 mm Hg. 
+                        <br><br>
+                        As compared to those with increased blood pressure, individuals with a normal blood pressure have a <b>24% lower risk*</b> of coronary artery disease.</p>
+                </div>
+            </div>
+
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="images/CAD-AHA (1)-03.png"/>
+                </div>
+                <div class="col-10 col-sm-9">
+                    <h3>Control Cholesterol</h3>
+                    <p class="p-caption">A <a href="https://www.nhlbi.nih.gov/files/docs/public/heart/wyntk.pdf" target="_blank">normal untreated total cholesterol</a> for adults is <200 mg/dl. As compared to those with elevated cholesterol, individuals with normal cholesterol have a <b>16% lower risk*</b> of coronary artery disease.</p>
+                </div>
+            </div>
+
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="images/CAD-AHA (1)-06.png"/>
+                </div>
+                <div class="col-10 col-sm-9">
+                    <h3>Reduce Blood Sugar</h3>
+                    <p class="p-caption">A <a href="https://www.heart.org/-/media/healthy-living-files/infographics/lifes-simple-7-blood-sugar-infographic.pdf?la=en" target="_blank">normal blood sugar</a> (‘fasting blood glucose’) is <100 mg/dl. As compared to those with elevated blood sugar, individuals with  normal blood sugar have a <b>31% lower risk*</b> of coronary artery disease.</p>
+                </div>
+               
+            </div>
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="images/CAD-AHA (1)-04.png"/>
+                </div>
+                <div class="col-10 col-sm-9">
+                    <h3>Exercise Regularly</h3>
+                    <p class="p-caption"><a href="https://www.heart.org/en/healthy-living/fitness/fitness-basics/aha-recs-for-physical-activity-in-adults" target="_blank">Current recommendations</a> for physical activity suggest at least 150 minutes/week of moderate intensity exercise or 75 minutes/week of vigorous intensity exercise or combination. 
+                    <br><br>
+                    As compared to those who do not exercise this amount, individuals who follow this recommendation have a <b>16% lower risk*</b> of coronary artery disease.</p>
+                </div>
+
+            </div>
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="images/CAD-AHA (1)-07.png"/>
+                </div>
+                <div class="col-10 col-sm-9">
+                    <h3>Follow a Healthy Diet</h3>
+                    <p class="p-caption">A <a href="https://www.heart.org/en/healthy-living/healthy-lifestyle/my-life-check--lifes-simple-7/lifes-simple-7-eat-better-infographic" target="_blank">healthy diet</a> is high in heart-healthy foods &mdash; fruits, vegetables, fish, whole grains &mdash; and low in unhealthy foods &mdash; sodium and sugar sweetened beverages. 
+                    <br><br>
+                    As compared to those with an unhealthy diet pattern, individuals who follow a healthy diet have <b>27% lower risk*</b> of coronary artery disease.</p>
+                </div>
+            </div>
+
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="images/CAD-AHA (1)-01.png"/>
+                </div>
+                <div class="col-10 col-sm-9">
+                    <h3>Maintain Normal Weight</h3>
+                    <p class="p-caption">A <a href="https://www.heart.org/en/healthy-living/healthy-eating/losing-weight/bmi-in-adults" target="_blank">normal weight</a> is defined as a <a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm" target="_blank">body mass index</a> less than 25 kg/m2. As compared to those with increased body mass index, individuals with a normal weight have <b>36% lower risk* of coronary artery disease</b>.</p>
+                </div>
+            </div>
+
+            <div class="row box-wrapper">
+                <div class="col-2 col-sm-3">
+                    <img class="aha-icon" src="images/CAD-AHA (1)-02.png"/>
+                </div>
+                <div class="col-10 col-sm-9">
+                    <h3>Stop Smoking</h3>
+                    <p class="p-caption"><a href="https://www.heart.org/en/healthy-living/healthy-lifestyle/my-life-check--lifes-simple-7/ls7-quit-smoking-infographic" target="_blank">Smoking</a> is a leading preventable cause of coronary artery disease. As compared to those who have smoked, individuals who have never smoked have a <b>26% lower risk*</b> of coronary artery disease.</p>
+                </div>
+            </div>
+            * Risk estimates above based on an analysis of 486,477 participants in the <a href="https://www.ukbiobank.ac.uk/" target="_blank">UK Biobank</a> research study.</p>
+        </div>
+
+    </section>
+
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="flex-end-row row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="copyright">This education tool was designed and developed by Lia Petronio, data visualization developer on Pattern — a team focused on data visualization  — at Broad Institute as part of a collaboration focused on cardiovascular risk prediction between the Broad Institute's Cardiovascular Disease Initiative and IBM Research. Content development led by genetic counselor Deanna Brockman and post-doctoral fellow Jacqueline Dron.</div>
+                </div>
+    
+                <div class="col-lg-4 offset-lg-4 col-md-12 col-sm-12">
+                    <br>
+                    <div class="copyright">Designed and Developed by <a href="https://pattern.broadinstitute.org" target="_blank">Pattern</a></div>
+                    <div class="copyright">Contact us at <a href="mailto:pattern@broadinstitute.org">pattern@broadinstitute.org</a></div>
+        
+                </div>
+            </div>
+    
+            <div class="flex-end-row row">
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <a  href="https://www.broadinstitute.org/" target="_blank"><img  class="logo" src="images/logo_broad_black.svg" alt=""></a>
+                </div>
+                <div class="col-lg-4 offset-lg-6 offset-md-2 col-md-4 col-sm-6">
+                    <br>
+                    <div class="copyright">© 2021 Broad Institute. All rights reserved.</div> 
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+     
+</body>
+
+    <script src="build/js/polygenic-score-visual-explainer.min.js"></script>
+    <script>
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const data = {
+                score: "data/CAD.Percentile.Score.csv",
+                risk: "data/CAD.Percentile.OddsRatio.csv",
+                figure: "images/figure.svg",
+                language: "english"
+            }
+            const promises = polygenicScoreVisualExplainer.createDataPromises(data);
+          //  window.location.replace("http://polygenicscores.org/explained/");
+
+        });
+    </script>
+
+
+</html>

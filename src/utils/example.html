@@ -1,0 +1,212 @@
+
+<!-- http://bl.ocks.org/tomgp/6719986 -->
+<html>
+<head>
+	<title>Discrete Gausian</title>
+	<!-- general -->
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+		}
+	</style>
+	<!--bars-->
+	<style type="text/css">
+		.distribution-bar{
+			fill:#333;
+			stroke:#fff;
+		}
+
+	</style>
+	<!--slider-->
+	<style type="text/css">
+		.axis {
+		  font: 10px sans-serif;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  user-select: none;
+		}
+
+		.axis .domain {
+		  fill: none;
+		  stroke: #000;
+		  stroke-opacity: .3;
+		  stroke-width: 10px;
+		  stroke-linecap: round;
+		}
+
+		.axis .halo {
+		  fill: none;
+		  stroke: #ddd;
+		  stroke-width: 8px;
+		  stroke-linecap: round;
+		}
+
+		.slider .handle {
+		  fill: #fff;
+		  stroke: #000;
+		  stroke-opacity: .5;
+		  stroke-width: 1.25px;
+		  pointer-events: none;
+		}
+	</style>
+</head>
+<body>
+<div id='distribution-chart'><svg id='gaussian'></svg></div>
+<p>Set the variance:</p>
+<div id='distribution-control'><svg id='variance-slider'></svg></div>
+</body>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="gaussian.js"></script>
+<script type="text/javascript">
+'use strict'
+
+function discreteGausian( mean, variance, resolution ){
+	var mean = 0,
+		distribution = new Gaussian(mean, variance),
+		discretePDF = 1,
+		oldCDF = distribution.cdf(mean - (resolution/2)), 
+		discreteDistribution = [],
+		sliceThreshold = 0.001,
+		jobDone = false,
+		i = (mean + resolution/2);
+
+	while(!jobDone){
+		var newCDF = distribution.cdf( i );
+		var slice = newCDF - oldCDF; 
+		discreteDistribution.push( slice );
+		if(discreteDistribution.length  > 1 ){
+			discreteDistribution.unshift( slice );
+		}
+		if(slice < sliceThreshold){
+			jobDone = true;
+		}
+		oldCDF = newCDF;
+		i += resolution;
+	}
+	return discreteDistribution;
+}
+
+var height = 300,
+	sliderHeight = 150,
+	width = 700;
+
+var varianceSliderScale = d3.scale.linear()
+	    .domain([0.01, 30])
+	    .range([0, width-60])
+	    .clamp(true);
+
+d3.selectAll('svg')
+	.attr('width',width)
+	.attr('height',height);
+
+drawDistribution('#gaussian', discreteGausian(0, 2, 1));
+drawControl('#variance-slider', varianceSliderScale, changeVariance);
+
+function changeVariance(v){
+	if(v>0){
+		drawDistribution('#gaussian', discreteGausian(0, v, 1));
+	}
+}
+
+function drawControl(svgSelector, scale, callback){
+	var margin = {top:10,left:30,bottom:30,right:30};
+	var brush = d3.svg.brush()
+	    .x(scale)
+	    .extent([0, 0])
+	    .on("brush", brushed);
+
+	var svg = d3.select(svgSelector)
+				.attr('width', width)
+				.attr('height', sliderHeight)
+			.append('g').attr('transform', 'translate('+margin.left+','+margin.top+')');
+
+	svg.append("g")
+			.attr("class", "x axis")
+			.attr("transform", "translate(0," + height / 2 + ")")
+			.call(d3.svg.axis()
+				.scale(scale)
+				.orient("bottom")
+//				.tickFormat(function(d) { return d; })
+				.tickSize(0)
+				.tickPadding(12))
+		.select(".domain")
+		.select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+			.attr("class", "halo");
+
+	var slider = svg.append("g")
+		.attr("class", "slider")
+		.call(brush);
+
+	slider.selectAll(".extent,.resize")
+		.remove();
+
+	slider.select(".background")
+		.attr("height", height);
+
+	var handle = slider.append("circle")
+		.attr("class", "handle")
+		.attr("transform", "translate(0," + sliderHeight / 2 + ")")
+		.attr("r", 9);
+
+	slider
+		.call(brush.event);
+
+	function brushed() {
+		var value = brush.extent()[0];
+		if (d3.event.sourceEvent) { // not a programmatic event
+			value = scale.invert(d3.mouse(this)[0]);
+			brush.extent([value, value]);
+		}
+		handle.attr("cx", scale(value));
+		callback(value);
+	}
+
+}
+
+function drawDistribution(svgSelector, distribution){
+	var x = d3.scale.linear()
+				.domain([0, distribution.length])
+				.range([0, width]);
+	var y = d3.scale.linear()
+				.domain([0, d3.max(distribution)])
+				.range([0, height]);
+
+	var group = d3.select(svgSelector).selectAll('rect')
+		.data(distribution)
+
+	group.enter().append('rect')
+		.attr('x',function(d,i){
+			return width;
+		})
+		.attr('y',function(d){
+			return height-y(d);
+		})
+		.attr('height',function(d){
+			return y(d);
+		})
+		.attr('width', function(){
+			return x(1);
+		})
+		.attr('class','distribution-bar');
+
+	group.transition()
+		.attr('x',function(d,i){
+			console.log('c');
+			return x(i);
+		})
+		.attr('y',function(d){
+			return height-y(d);
+		})
+		.attr('height',function(d){
+			return y(d);
+		})
+		.attr('width', function(){
+			return x(1);
+		});
+
+	group.exit().remove();
+}
+
+
+</script>
+</html>
