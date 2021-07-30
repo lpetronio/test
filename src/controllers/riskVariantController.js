@@ -84,7 +84,7 @@ function init(tConfig = riskVariantConfig, configFigures = riskVariantFiguresCon
     if (language == "espanol"){
         labels = ["sin enfermedad", "con enfermedad"]
     } else if (language == "english"){
-        labels = ["without disease", "with disease"]
+        labels = ["without disorder", "with disorder"]
     }
 
     var fConfig = configFigures
