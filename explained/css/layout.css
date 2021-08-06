@@ -193,11 +193,16 @@ section{
 }
 .card-block{
   width:70%;
+  border-bottom: .5px solid #e2e2e2;
+  padding-bottom:1em;
 }
 .card-icon{
   background-color:#e2e2e2;
   width:150px;
   height:150px;
+}
+.card-icon img{
+width:100%;
 }
 .card-info{
   width:calc(100% - 150px);
