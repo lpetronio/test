@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Polygenic Scores Explained</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Overpass:300,400,700,900|Playfair+Display:400,400i,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+
+</head>
+
+<body class="container-fluid">
+    <div class="navbar">
+        <div class="navbar-home">
+            <a class="nav-home" id="intro-to-polygenic-scores-nav">Polygenic Scores</a>
+            <small class="header-banner">This website is being used for research purposes only.</small>
+        </div>
+        <div class="navbar-sections" id="sections">
+            <a class="nav-option" id="genetic-variation-nav">Genetic Variation</a>
+            <a class="nav-option" id="riskvariant-nav">Risk Variants</a>
+            <a class="nav-option" id="pscalc-nav">Calculation</a>
+            <a class="nav-option" id="psinterp-nav">Interpretation</a>
+            <a class="nav-option" id="psapp-nav">Application</a>
+            <a class="nav-option" id="disorder-nav">Alcohol Use Disorder</a>
+            <a class="nav-option" id="dnadestiny-nav">DNA is not Destiny</a>
+        </div>
+    </div>
+
+
+    <div id="scroll-container">
+        <section class="section-banner" id="intro-to-polygenic-scores-section">
+            <h2><b>A polygenic score</b> is used to estimate a person’s risk for a particular health outcome, such as
+                disorders like alcohol use disorder, based
+                on their genetics.
+                <br><br> Knowing whether your genetic background increases your risk to develop certain disorders may
+                help you make important decisions about your health.
+            </h2>
+        </section>
+
+        <section class="section-scroll-wrapper" id="variant-scroll-wrapper">
+            <div class="plot-wrapper" id="variant-plot-wrapper"></div>
+
+            <section class="section-wrapper" id="genetic-variation-section">
+
+                <div class="scene" id="genetic-variation-genetic-code">
+                    <div class="text-block">
+                        <h2>Genetic Variation</h2>
+                        <p>Everyone has a genetic code that they inherit from each of their parents. Each person’s
+                            genetic code is made up of <b class='san-label non-v-color'>units of information</b>, that
+                            contain instructions the body needs in order to function.</p>
+                    </div>
+                </div>
+
+                <div class="scene" id="genetic-variation-variant">
+                    <div class="text-block">
+                        <p>Most of the genetic code is identical between individuals. However, differences in the
+                            genetic code are called <b class="san-label v-color">genetic variants</b>.</p>
+                    </div>
+                </div>
+
+                <div class="scene" id="genetic-variation-group-variant">
+                    <div class="text-block">
+                        <p><b class="san-label v-color">Genetic variants</b> contribute to traits that make us unique
+                            such as eye color, height, and taste preferences.</p>
+                    </div>
+                </div>
+
+                <div class="scene" id="genetic-variation-group-disease-variant">
+                    <div class="text-block">
+                        <p>Genetic variants can also impact our risk of certain disorders &mdash; these are
+                            called <b class="san-label dvi-color">risk variants</b>.</p>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+        <!-- end of variant section -->
+
+        <section class="section-scroll-wrapper" id="riskvariant-scroll-wrapper">
+            <div class="plot-wrapper" id="riskvariant-plot-wrapper"></div>
+
+            <section class="section-wrapper" id="riskvariant-section">
+
+                <div class="scene" id="riskvariant-group">
+                    <div class="text-block">
+                        <h2>Risk Variants</h2>
+                        <p><b>To discover risk variants</b>, scientists compare the genetic codes of people without a
+                            disorder to people with a disorder.</p>
+                    </div>
+                </div>
+                <div class="scene" id="riskvariant-increase">
+                    <div class="text-block">
+                        <p> If a genetic variant occurs more frequently in people with a disorder, it is associated with
+                            <b class="san-label dvi-color">increased risk</b>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="scene" id="riskvariant-decrease">
+                    <div class="text-block">
+                        <p> If a genetic variant occurs more frequently in people without a disorder, it is associated
+                            with <b class="san-label dvr-color">decreased risk</b>.</p>
+                    </div>
+                </div>
+
+                <div id="riskvariant-magnitude">
+                    <div class="scene" id="riskvariant-magnitude-1">
+                        <div class="text-block">
+                            <p>Risk variants can increase or decrease a person’s risk of disorder and each can have
+                                different <b>magnitudes of impact</b>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="scene" id="riskvariant-magnitude-2">
+                        <div class="text-block">
+                            <p>
+                                Some risk variants have a <b>large impact</b> on risk and some risk variants have a
+                                <b>small impact</b> on risk.
+                            </p>
+                            <div class="legend-wrapper" id="riskvariant-magnitute-legend">
+                                <span class="legend-label" style="float:left">&#8592; small impact</span>
+                                <span class="legend-label" style="float:right">large impact &#8594;</span>
+                                <image src="images/effect_legend.svg"></image>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scene" id="riskvariant-leave">
+                    <div class="text-block">
+                        <p> A single, small impact variant has little impact on risk, but <b>many of them together have
+                                a larger impact</b>.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="container section-banner">
+            <h2> A <b>polygenic score</b>
+                looks at all of these small impact risk variants at once to estimate a person’s risk for a disorder.
+            </h2>
+        </section>
+
+
+        <section class="section-scroll-wrapper" id="pscalc-scroll-wrapper">
+            <div class="plot-wrapper" id="ps-plot-wrapper"></div>
+            <section class="section-wrapper" id="pscalc-section">
+                <div class="scene" id="pscalc-individual-pair">
+                    <div class="text-block">
+                        <h2>Polygenic Score Calculation</h2>
+                        <p><b>To calculate a person's polygenic score</b> for a particular disorder, scientists add up
+                            the total number of risk-increasing and risk-decreasing variants, along with their magnitude
+                            of impact.</p>
+                    </div>
+                </div>
+                <div class="scene" id="pscalc-individual-stack">
+                    <div class="text-block">
+                        <p>A polygenic score tells you how your risk for a disorder compares to others.
+                        </p>
+                    </div>
+                </div>
+                <div class="scene" id="pscalc-population-pair">
+                    <div class="text-block">
+                        <p>Scientists can determine polygenic scores for a whole population.
+                        </p>
+                    </div>
+                </div>
+                <div class="scene" id="pscalc-population-stack">
+                    <div class="text-block">
+                        <p>Some people will have a higher or lower score, depending on their number of risk-increasing
+                            or risk-decreasing variants, and the magnitude of impact of each variant.</p>
+                    </div>
+                </div>
+                <div class="scene" id="pscalc-population-average">
+                    <div class="text-block">
+                        <!-- <p>People with an approximately even number of risk-increasing and risk-decreasing variants are
+                                at an <b class="non-v-color">average risk of disorder</b> based on their genetics. </p> -->
+                        <p>People with an approximately even number of risk-increasing and risk-decreasing variants have
+                            <b class="non-v-color">average</b> scores.
+                        </p>
+                    </div>
+                </div>
+                <div class="scene" id="pscalc-population-increase">
+                    <div class="text-block">
+                        <!-- <p>People with more risk-increasing variants are at an <b class="dvi-color">increased risk of
+                            disorder</b> based on their genetics.</p> -->
+                        <p>People with more risk-increasing variants have <b class="dvi-color">higher</b> scores.</p>
+                    </div>
+                </div>
+                <div class="scene" id="pscalc-population-decrease">
+                    <div class="text-block">
+                        <!-- <p>People with more risk-decreasing variants are at a <b class="dvr-color">decreased risk of
+                            disorder</b> based on their genetics.</p> -->
+                        <p>People with more risk-decreasing variants have <b class="dvr-color">lower</b> scores.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-wrapper" id="psinterp-section">
+                <div class="scene" id="psinterp-distribution-average">
+                    <div class="text-block">
+                        <h2>Polygenic Score Interpretation</h2>
+                        <p>Most people have <b class="non-v-color">average genetic risk of disorder</b>.
+                        </p>
+                    </div>
+                </div>
+                <div class="scene" id="psinterp-distribution-increased">
+                    <div class="text-block">
+                        <p>
+                            <b>Your score can be higher than average</b> meaning that you have <b
+                                class="dvi-color">increased genetic risk of disorder</b> compared to most people.
+                            <br><br>
+                            <b>If your polygenic score is in the 95th percentile</b>, you do not have a 95% chance of
+                            developing the disorder. Rather it means that &mdash; out of 100 people &mdash; your
+                            polygenic score is higher than 95 people and the same or lower than 5.
+                        </p>
+                    </div>
+                </div>
+                <div class="scene" id="psinterp-distribution-decreased">
+                    <div class="text-block">
+                        <p>
+                            <b>Your score can be lower than average</b> meaning that you have <b
+                                class="dvr-color">decreased genetic risk of disorder</b> compared to most people.
+                            <br><br>
+                            <b>If your polygenic score is in the 5th percentile</b>, you do not have a 5% chance of
+                            developing the disorder. Rather it means that &mdash; out of 100 people &mdash; your
+                            polygenic score is higher than 5 people and the same or lower than 95.
+                        </p>
+                    </div>
+                </div>
+            </section>
+    </div>
+    </section>
+
+
+    <section class="container" id="psapp-section">
+        <h2>Polygenic Score Application</h2>
+        <p>Polygenic scores may be useful tools to assess risk for many important health outcomes, including
+            substance use disorders and mental health conditions, all of which are influenced by our genes.
+            <br><br>
+            Researchers are still in the process of finding all the genes that influence alcohol use disorder. So far,
+            they have only identified some of the specific genetic variants that contribute to the development of
+            alcohol use disorder. Right now polygenic risk scores only account for up to 5% of the total things that can
+            contribute to the development of alcohol problems. How accurately they predict outcomes can also vary across
+            people with different racial/ethnic backgrounds. Minorities tend to be underrepresented in genetic research,
+            so polygenic risk scores may not be as accurate for people with non-European ancestral backgrounds.
+
+        </p>
+    </section>
+
+    <section class="container" id="disorder-section">
+        <h2>Understanding Alcohol Use Disorder</h2>
+        <p>Alcohol use disorder is diagnosed when an individual has trouble stopping or controlling their alcohol use
+            despite it causing serious problems at home, at work, or to their health. More than 107 million people
+            around the world have an alcohol use disorder. Excessive alcohol use can cause liver disease, digestive
+            problems, heart problems, neurological complications, and increased risk of cancer. Nearly 100,000 people
+            die as a result of alcohol problems every year in the United States. Both genes and environments influence a
+            person’s risk of developing an alcohol use disorder.
+        </p>
+        <div class="disease-image">
+            <img src="images/0.png" />
+        </div>
+    </section>
+
+
+    <section class="container" id="dnadestiny-section">
+        <div class="sub-section">
+            <h2>DNA is not destiny &mdash; additional factors influence your risk</h2>
+            <p>Even though you can’t change your genetics, there are ways to reduce your risk of developing an alcohol
+                use disorder.
+            </p>
+        </div>
+        <div class="sub-section">
+            <h3>Strategies for cutting down alcohol use:</h3>
+            <div class="row card-block">
+                <div class="card-icon">
+                    <img src="images/1.png" />
+                </div>
+                <div class="card-info">
+                    <p>Keep track of how much you drink - Count and measure your drinks</p>
+                </div>
+            </div>
+            <div class="row card-block">
+                <div class="card-icon">
+                    <img src="images/2.png" />
+                </div>
+                <div class="card-info">
+                    <p>Find alternatives, such as new hobbies or friendships, or socialize with others who do not drink
+                    </p>
+                </div>
+            </div>
+            <div class="row card-block">
+                <div class="card-icon">
+                    <img src="images/3.png" />
+                </div>
+                <div class="card-info">
+                    <p>Take a break from drinking alcohol or choose not to drink at all sometimes, even though others
+                        are drinking</p>
+                </div>
+            </div>
+            <div class="row card-block">
+                <div class="card-icon">
+                    <img src="images/4.png" />
+                </div>
+                <div class="card-info">
+                    <p>Set goals for how many days you will drink each week and how many drinks you will have on those
+                        days</p>
+                </div>
+            </div>
+            <div class="row card-block">
+                <div class="card-icon">
+                    <img src="images/5.png" />
+                </div>
+                <div class="card-info">
+                    <p>Avoid places and people that trigger drinking and do not keep alcohol at home</p>
+                </div>
+            </div>
+            <div class="row card-block">
+                <div class="card-icon">
+                    <img src="images/6.png" />
+                </div>
+                <div class="card-info">
+                    <p>Learn how to say “no” when offered a drink</p>
+                </div>
+            </div>
+        </div>
+        <div class="sub-section">
+            <h3>Strategies for reducing the harmful impact of alcohol use: </h3>
+            <ul>
+                <li>Pace your drinking and stop drinking when you feel “buzzed”</li>
+                <li>Reduce or avoiding shots of hard liquor</li>
+                <li>Eat food and drink water before and while drinking alcohol</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container">
+        <button class="redcap-button"><a href="https://redcap.vcu.edu/surveys/?s=NW4WEXHX3WAHPWHL">Click to return to
+                the survey</a>
+        </button>
+    </section>
+
+    <section class="container" id="references-section">
+        <div class="sub-section">
+            <h3>References</h3>
+            <ol class="reference-ul">
+                <li>Hannah Ritchie and Max Roser (2018) - "Alcohol Consumption". Published online at <a
+                        href="https://ourworldindata.org/">OurWorldInData.org</a>.
+                    Retrieved from: <a
+                        href="https://ourworldindata.org/alcohol-consumption">https://ourworldindata.org/alcohol-consumption</a>
+                    [Online Resource]</li>
+                <li>Esser MB, Sherk A, Liu Y, et al. Deaths and Years of Potential Life Lost From Excessive Alcohol Use
+                    — United States, 2011–2015. MMWR Morb Mortal Wkly Rep 2020;69:1428–1433. DOI: <a
+                        href="http://dx.doi.org/10.15585/mmwr.mm6939a6">http://dx.doi.org/10.15585/mmwr.mm6939a6</a>
+                </li>
+                <li>Mayo Clinic Staff. (n.d.). Alcohol use disorder—Symptoms and causes. Mayo Clinic. Retrieved July 19,
+                    2021, from <a
+                        href="https://www.mayoclinic.org/diseases-conditions/alcohol-use-disorder/symptoms-causes/syc-20369243">https://www.mayoclinic.org/diseases-conditions/alcohol-use-disorder/symptoms-causes/syc-20369243</a>
+                </li>
+                <li>Understanding Alcohol Use Disorder. (2021, April). National Institute on Alcohol Abuse and
+                    Alcoholism (NIAAA). <a
+                        href="https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/understanding-alcohol-use-disorder">https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/understanding-alcohol-use-disorder</a>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container-fluid">
+            <small class="copyright">Designed and Developed by <a href="https://pattern.broadinstitute.org"
+                    target="_blank">Pattern</a><br>© 2021 Broad Institute. All rights reserved.
+            </small>
+        </div>
+    </footer>
+
+
+</body>
+
+<script src="build/js/polygenic-score-visual-explainer.min.js"></script>
+<script>
+
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const data = {
+            score: "data/CAD.Percentile.Score.csv",
+            risk: "data/CAD.Percentile.OddsRatio.csv",
+            figure: "images/figure.svg",
+            language: "english"
+        }
+        const promises = polygenicScoreVisualExplainer.createDataPromises(data);
+    });
+</script>
+
+
+</html>

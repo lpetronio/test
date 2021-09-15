@@ -27,7 +27,21 @@ h3{
     padding:.5em 0em .5em 0em;
     margin:2em 0 0 0;
 }
-
+.redcap-button{
+    font-size:1.8rem;
+    padding:.5em;
+    background-color:white;
+    border:1px solid #EF4351;
+    color:#EF4351;
+    border-radius: 4px;
+}
+.redcap-button:hover{
+    opacity:.7
+}
+.redcap-button a{
+    text-decoration: none;
+    color:#EF4351;
+}
 p, li{
     font-family: 'Overpass', sans-serif;
     font-weight:300;

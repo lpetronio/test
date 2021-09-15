@@ -134,7 +134,7 @@ function render(config = ConfigPsPlots, tdata, tconfig = ConfigTower, dconfig = 
     } else if (language == "english"){
         labels = ["&#8592; lower score", "higher score &#8594;", "average risk", "decreased risk", "increased risk", "percentile", "Most people", "Average"];
 
-        flagLabel5 = ["significantly decreasd", "You are in the", "5th percentile", "of the polygenic score with", "significantly decreased", "genetic risk"];
+        flagLabel5 = ["significantly decreased", "You are in the", "5th percentile", "of the polygenic score with", "significantly decreased", "genetic risk"];
         flagLabel50 = ["average", "You are in the", "50th percentile", "of the polygenic score with", "average", "genetic risk"];
         flagLabel95 = ["significantly increased", "You are in the", "95th percentile", "of the polygenic score with", "significantly increased", "genetic risk"];
     }

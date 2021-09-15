@@ -48,31 +48,35 @@ function init(data, language){
     activateNavigation("pscalc")
     activateNavigation("psinterp")
     activateNavigation("psapp")
+     activateNavigation("disorder")
     activateNavigation("dnadestiny")
 
     document.getElementById("intro-to-polygenic-scores-nav").onclick = function() {
         scrollTo("intro-to-polygenic-scores-section", 50)
     }
    document.getElementById(`genetic-variation-nav`).onclick = function(){
-    scrollTo("variant-scroll-wrapper", 150)
+    scrollTo("variant-scroll-wrapper", 120)
    }
 
    document.getElementById(`riskvariant-nav`).onclick = function(){
-      scrollTo("riskvariant-scroll-wrapper", 150)
+      scrollTo("riskvariant-scroll-wrapper", 120)
     }
 
     document.getElementById(`pscalc-nav`).onclick = function(){
-        scrollTo("pscalc-scroll-wrapper", 150)
+        scrollTo("pscalc-scroll-wrapper", 120)
       }
    
     document.getElementById("psinterp-nav").onclick = function() {
-        scrollTo("psinterp-section", 150)
+        scrollTo("psinterp-section", 120)
     }
     document.getElementById("psapp-nav").onclick = function() {
-        scrollTo("psapp-section", 50)
+        scrollTo("psapp-section", 120)
+    }
+    document.getElementById("disorder-nav").onclick = function() {
+        scrollTo("disorder-section", 120)
     }
     document.getElementById("dnadestiny-nav").onclick = function() {
-        scrollTo("dnadestiny-section", 50)
+        scrollTo("dnadestiny-section", 120)
     }
 
 
@@ -109,7 +113,7 @@ function scrollTo(domId, yOffset) {
 function activateNavigation(domId){
     new ScrollMagic.Scene({
         triggerElement: `#${domId}-section`,
-        triggerHook: scrollUtils.bottomHook,
+        triggerHook: scrollUtils.topHook,
         duration: d3.select(`#${domId}-section`).node().clientHeight
     })
     .on('progress', function(){
